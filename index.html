@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Farewell 2025 | Wing Ready, Sky Waiting</title>
+  <meta name="description" content="Celebrate our seniors with memories, messages, and moments. Join us for Farewell 2025!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="sky">
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <span>Farewell 2025 — Wing Ready, Sky Waiting</span>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#titles">Titles</a>
+        <a href="#faq">FAQ</a>
+        <button id="themeToggle" class="toggle" aria-label="Toggle theme">🌗</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-card">
+        <h1 class="title">Wing Ready, Sky Waiting 🕊️</h1>
+        <p class="subtitle">Board your memories and fasten seatbelts — we’re taking our seniors to new heights. Dress sharp, bring your best smiles, and get set for takeoff!</p>
+
+        <!-- Meta -->
+        <div class="meta">
+          <span class="pill">📅 <b id="dateText">Dec 09, 2025</b></span>
+          <span class="pill">⏰ <b id="timeText">8:00 AM – 1:00 PM</b></span>
+          <span class="pill">📍 <b id="venueText">Auditorium, &lt;Your Campus&gt;</b></span>
+        </div>
+
+        <!-- Countdown under date–time–place -->
+        <div class="countdown" id="countdown">
+          <div class="timebox"><div class="num" id="d">--</div><div class="lab">Days</div></div>
+          <div class="timebox"><div class="num" id="h">--</div><div class="lab">Hours</div></div>
+          <div class="timebox"><div class="num" id="m">--</div><div class="lab">Minutes</div></div>
+          <div class="timebox"><div class="num" id="s">--</div><div class="lab">Seconds</div></div>
+        </div>
+
+        <!-- Runway progress (kept) -->
+        <div class="runway" id="runway">
+          <div class="runway-track">
+            <div class="runway-centerline"></div>
+            <div class="runway-fill" id="runwayFill"></div>
+            <div class="runway-plane" id="runwayPlane">🛫</div>
+          </div>
+          <div class="runway-meta"><span id="runwayPct">0%</span> to takeoff</div>
+        </div>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px">
+          <a href="#about" class="btn">More details</a>
+          <a href="#gallery" class="btn secondary">View Gallery</a>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="hero-card" style="display:grid; gap:14px">
+          <h3 style="margin:0">Highlights</h3>
+          <ul class="muted-list">
+            <li>Runway walk & boarding introductions</li>
+            <li>Fun titles as boarding passes</li>
+            <li>In-farewell entertainment: performances & open mic</li>
+            <li>Photo booth with pilot props & wings</li>
+          </ul>
+          <div class="glass card">
+            <small class="muted">Need info?</small>
+            <div style="display:flex; gap:10px; margin-top:8px; flex-wrap:wrap">
+              <a class="btn secondary" href="#faq">FAQ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="plane" aria-hidden="true">🕊️</div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="grid" style="grid-template-columns: 1fr;">
+        <div class="glass card">
+          <h2>Pre-Farewell Briefing</h2>
+          <p class="lead">We’re sending off our graduating batch with gratitude, laughter, and love. Help us make their last evening on campus unforgettable.</p>
+          <ul class="muted-list">
+            <li>Theme: <b>Wing Ready, Sky Waiting</b> (professional deep blues, silver accents)</li>
+            <li>Dress code: <b>Formals</b></li>
+            <li>Hosts: <b>Class XI & Cultural Council</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section">
+      <div class="glass card">
+        <h2>Farewell Log (Gallery)</h2>
+        <p class="lead">Photos from our shared Google Drive folder (embedded below). For hover-zoom tiles, add file IDs in <code>script.js</code>.</p>
+
+        <!-- Embedded Google Drive folder (shows everything in the folder) -->
+        <div class="drive-embed">
+          <iframe
+            src="https://drive.google.com/embeddedfolderview?id=1PR210VmqXe9ofMQSjjwUi3E9wcxdBDav#grid"
+            class="drive-frame"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+          ></iframe>
+        </div>
+
+        <!-- Native hover-zoom grid (no captions). Populate by IDs in script.js -->
+        <div class="gallery" id="galleryGrid" hidden></div>
+      </div>
+    </section>
+
+    <!-- FAREWELL TITLES -->
+    <section id="titles" class="section">
+      <div class="glass card">
+        <h2>Crew Manifest — Farewell Titles</h2>
+        <p class="lead">Hover on a title to see the student name and a positive note.</p>
+        <div id="titlesGrid" class="grid titles-grid"></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="glass card">
+        <h2>Passenger FAQs</h2>
+        <details open>
+          <summary><b>What’s the dress code?</b></summary>
+          <p class="lead">Formals. Think suits, sarees, or elegant ethnic fits. Keep it classy ✨</p>
+        </details>
+        <details>
+          <summary><b>Can juniors perform?</b></summary>
+          <p class="lead">Yes! Register with the Cultural Council by <b>December 1</b>.</p>
+        </details>
+        <details>
+          <summary><b>Will photos be shared?</b></summary>
+          <p class="lead">We’ll upload highlights here and on the official social pages.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="credits">© <span id="year"></span> Farewell Committee • Built with ❤️ by <a href="#">Your Team</a></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

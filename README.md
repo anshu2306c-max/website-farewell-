@@ -1,2 +1,2 @@
-# website-farewell-
+# farewell-official-website
 Farewell website
