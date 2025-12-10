@@ -1,5 +1,5 @@
 // === CONFIG — EDIT THESE FIELDS ===
-const EVENT_DATE = new Date('December 11, 2025 11:30:00 GMT+0530'); // IST
+const EVENT_DATE = new Date('December 10, 2025 11:30:00 GMT+0530'); // IST
 const EVENT_TIME_TEXT = '11:30 AM – 3:30 PM';
 const VENUE_NAME = 'School Assembly Area <Your Campus>';
 
