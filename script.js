@@ -1,7 +1,7 @@
 // === CONFIG — EDIT THESE FIELDS ===
-const EVENT_DATE = new Date('December 09, 2025 08:00:00 GMT+0530'); // IST
-const EVENT_TIME_TEXT = '8:00 AM – 1:00 PM';
-const VENUE_NAME = 'Auditorium, <Your Campus>';
+const EVENT_DATE = new Date('December 11, 2025 11:30:00 GMT+0530'); // IST
+const EVENT_TIME_TEXT = '11:30 AM – 3:30 PM';
+const VENUE_NAME = 'School Assembly Area <Your Campus>';
 
 // GALLERY OPTION A: Native grid with hover-zoom (no captions)
 // Paste public image FILE IDs here to enable (each file must be shared as Anyone with link -> Viewer).
